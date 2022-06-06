@@ -1,6 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
-function SideWidget() {
+
+function SideWidget(props) {
+
+    // const [selectedCategory, setSelectedCategory] = useState(props.category);
+    
+    const handleOnClick = (e) => {
+
+        e.preventDefault();
+
+        // setSelectedCategory(e.target.name);
+        // console.log(selectedCategory, "selected", e.target.name);
+        props.handleOnCategoryChange(e.target.name);
+
+    }
+
     return(
         <div className="col-lg-4">
                     <div className="card mb-4">
@@ -18,16 +33,16 @@ function SideWidget() {
                             <div className="row">
                                 <div className="col-sm-6">
                                     <ul className="list-unstyled mb-0">
-                                        <li><a href="#!">Web Design</a></li>
-                                        <li><a href="#!">HTML</a></li>
-                                        <li><a href="#!">Freebies</a></li>
+                                        <li><Link to="/" name="Restaurants" onClick={handleOnClick}>Restaurants</Link></li>
+                                        <li><Link to="/" name="Hotels" onClick={handleOnClick}>Hotels</Link></li>
+                                        <li><Link to="/" name="Cinemas" onClick={handleOnClick}>Cinemas</Link></li>
                                     </ul>
                                 </div>
                                 <div className="col-sm-6">
                                     <ul className="list-unstyled mb-0">
-                                        <li><a href="#!">JavaScript</a></li>
-                                        <li><a href="#!">CSS</a></li>
-                                        <li><a href="#!">Tutorials</a></li>
+                                        <li><Link to="/" name="Sites" onClick={handleOnClick}>Sites</Link></li>
+                                        <li><Link to="/" name="Events" onClick={handleOnClick}>Events</Link></li>
+                                        <li><Link to="/" name="Cafes" onClick={handleOnClick}>Cafes</Link></li>
                                     </ul>
                                 </div>
                             </div>

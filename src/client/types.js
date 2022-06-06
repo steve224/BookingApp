@@ -1,0 +1,20 @@
+export const types = {
+
+    //Category_Types
+    GET_CATEGORY: "GET_CATEGORY",
+    SET_CATEGORY: "SET_CATEGORY",
+
+    //Events_Types
+    GET_ALL_EVENTS: 'GET_ALL_EVENTS',
+    GET_RECENT_EVENT: 'GET_RECENT_EVENT',
+    GET_FEATURED_EVENT: 'GET_FEATURED_EVENT',
+
+
+    //Restaurant_Types
+    GET_ALL_RESTAURANTS: "GET_ALL_RESTAURANTS",
+    GET_FEATURED_RESTAURANT: "GET_FEATURED_RESTAURANT",
+
+    //Error
+    ERROR: "ERROR"
+
+}

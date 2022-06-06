@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-function FeaturedEvent(props) {
+function FeaturedRestaurant(props) {
 
-    const { name, description } = props.featuredEvent;
+    const { name, description } = props.featuredRestaurant;
 
     return(
         <div className="card mb-4">
@@ -19,4 +19,4 @@ function FeaturedEvent(props) {
     );
 }
 
-export default FeaturedEvent;
+export default FeaturedRestaurant;
