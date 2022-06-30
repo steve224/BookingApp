@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import Posts from "./Posts";
 import FeaturedPost from "./FeaturedPost";
 import SideWidget from "./SideWidget";
+import CalendarComponent from "./CalendarComponent";
+import AppointmentForm from "./AppointmentForm";
 
 
 function Main(props) {
@@ -21,9 +23,11 @@ function Main(props) {
         <>
         <div className="container py-5 mb-4">
             <div className="row">
-                <div className="col-lg-8">
-                    <FeaturedPost category={category} />
-                    <Posts category={category} />
+                <div className="col-lg-7">
+                    {/* <FeaturedPost category={category} /> */}
+                    <CalendarComponent />
+                    {/* <AppointmentForm /> */}
+                    {/* <Posts category={category} /> */}
                 </div>
                 <SideWidget handleOnCategoryChange={handleOnCategoryChange} category={category}/>
             </div>

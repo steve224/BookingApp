@@ -9,18 +9,22 @@ import Main from "./components/Main";
 import EventDetails from "./components/EventDetails";
 import ScrollToTop from "./components/ScrollToTop";
 import EventForm from "./components/EventForm";
+import RegistrationForm from "./components/RegistrationForm";
+import LoginForm from "./components/LoginForm";
 
 
 function App() {
     return(
         <Provider store={store}>
-        <Navigation />
         <Router>
             <ScrollToTop />
+            <Navigation />  
             <Routes>
                 <Route exact path="/" element={<Main />} />
                 <Route exact path="/EventDetails" element={<EventDetails />} />
                 <Route exact path="/AddEvent" element={<EventForm />} />
+                <Route exact path="/Register" element={<RegistrationForm />} />
+                <Route exact path="/Login" element={<LoginForm />} />
             </Routes>
         </Router>
         {/* <Header /> */}

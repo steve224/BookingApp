@@ -28,9 +28,11 @@ function EventForm() {
 
     const validateForm = (formInputs) => {
         
+        const nameRegex = new RegExp(/^(?!\s)[a-zA-Z][\\s\][a-zA-Z]/);
+        // const emailRegex = new RegExp('^[a-zA-Z0-9._:$!%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]$');
         const formErrors = {};
 
-        if(!formInputs.name)  
+        if(!formInputs.name || !nameRegex.test(formInputs.name))  
             formErrors.nameError = "Pls enter name";
         if(!formInputs.date)
             formErrors.dateError = "Pls choose date";
@@ -55,19 +57,19 @@ function EventForm() {
         // const formValues = {name, date, startTime, endTime, location, description};
         let formData = new FormData();
         const formErrors = validateForm(formInputs);
-        console.log("FormErrors", formErrors);
+        // console.log("FormErrors", formErrors);
 
         if(formErrors) {
             setErrors(formErrors);
-        }    
-        // } else {
-        //     formData.append("data", formInputs);
-        //     e.target.reset();        
-        //     console.log("passed");
-        // }
-        formData.append("data", formInputs);
-        e.target.reset();        
-        console.log("passed");
+        } else {
+            console.log("passed");
+            formData.append("data", formInputs);
+            e.target.reset();        
+            
+        }
+        // formData.append("data", formInputs);
+        // e.target.reset();        
+        // console.log("passed");
         
     }
 

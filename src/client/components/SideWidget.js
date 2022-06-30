@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import AppointmentForm from "./AppointmentForm";
+import CalendarComponent from "./CalendarComponent";
 
 
 function SideWidget(props) {
@@ -17,8 +19,8 @@ function SideWidget(props) {
     }
 
     return(
-        <div className="col-lg-4">
-                    <div className="card mb-4">
+        <div className="col-lg-5">
+                    {/* <div className="card mb-4">
                         <div className="card-header">Search</div>
                         <div className="card-body">
                             <div className="input-group">
@@ -26,8 +28,9 @@ function SideWidget(props) {
                                 <button className="btn btn-primary" id="button-search" type="button">Go!</button>
                             </div>
                         </div>
-                    </div>
-                    <div className="card mb-4">
+                    </div> */}
+                    <AppointmentForm />
+                    {/* <div className="card mb-4">
                         <div className="card-header">Categories</div>
                         <div className="card-body">
                             <div className="row">
@@ -47,11 +50,31 @@ function SideWidget(props) {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                     <div className="card mb-4">
-                        <div className="card-header">Side Widget</div>
-                        <div className="card-body">You can put anything you want inside of these side widgets. They are easy to use, and feature the Bootstrap 5 card component!</div>
+                        <div className="card-header">Services</div>
+                        <div className="card-body">
+                            <div className="row">
+                                <div className="col-sm-6">
+                                    <ul className="list-unstyled mb-0">
+                                        <li><Link to="/" name="Crisis Intervention" onClick={handleOnClick}>Crisis Intervention</Link></li>
+                                        <li><Link to="/" name="Mental Health Care" onClick={handleOnClick}>Mental Health Care</Link></li>
+                                        <li><Link to="/" name="Rehab" onClick={handleOnClick}>Rehab</Link></li>
+                                        <li><Link to="/" name="Therapies" onClick={handleOnClick}>Therapies</Link></li>
+                                    </ul>
+                                </div>
+                                <div className="col-sm-6">
+                                    <ul className="list-unstyled mb-0">
+                                        <li><Link to="/" name="Marriage Counseling" onClick={handleOnClick}>Marriage Counseling</Link></li>
+                                        <li><Link to="/" name="Psychology Assist" onClick={handleOnClick}>Psychology Assist</Link></li>
+                                        <li><Link to="/" name="Post Discharge Follow-up" onClick={handleOnClick}>Post Discharge Follow-up</Link></li>
+                                        <li><Link to="/" name="Training" onClick={handleOnClick}>Training</Link></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                   
                 </div>
     );
 }
