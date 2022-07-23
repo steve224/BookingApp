@@ -29,7 +29,7 @@ function SideWidget(props) {
                             </div>
                         </div>
                     </div> */}
-                    <AppointmentForm />
+                    {/* <AppointmentForm /> */}
                     {/* <div className="card mb-4">
                         <div className="card-header">Categories</div>
                         <div className="card-body">

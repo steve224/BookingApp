@@ -1,4 +1,6 @@
 import React from "react";
+import "react-big-calendar/lib/css/react-big-calendar.css";
+import "react-datepicker/dist/react-datepicker.css";
 // import ReactDOM from "react-dom";
 // import { createRoot } from "react-dom/client";
 // import * as ReactDOM from "react-dom/client";
